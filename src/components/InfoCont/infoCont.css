@@ -1,0 +1,35 @@
+.closeBtn{
+    border-radius: 0px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.288);
+    background-color: #12346e;
+    color: white;
+    margin: 10px 0px;
+}
+
+.modalBackinfo{
+    margin: 10px 0px;
+    padding: 10px;
+    background-color:#b1c700;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.288);
+}
+
+
+.contact { 
+    background-color: white; 
+    width: 50%; 
+    border-left: #b1c700 2px solid;
+}
+
+.contact h3{
+    font-weight: 600;
+}
+
+.content {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.288);
+    line-height: 1.5;
+    text-align:center;
+    color: #12346e;
+    align-content: center;
+    display:flex;
+    justify-content: space-between;
+}

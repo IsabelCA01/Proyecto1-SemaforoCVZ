@@ -1,0 +1,39 @@
+.card {
+    margin: none;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: white;
+  }
+
+.title1{
+  color:white;
+  text-align: center;
+  font-size: 35px;
+  padding: none;
+  margin-top: 0px;
+
+}
+
+.textCard{
+  text-align: left;
+}
+
+.patitulo{
+  width: 50%;
+  font-weight: 600;
+  text-align: left;
+}
+.painfo{
+  width:50%;
+  text-align: right;
+}
+
+.parenglon{
+  display: flex;
+  border-bottom:  solid 1px white;
+  padding: none;
+  margin: none;
+}
