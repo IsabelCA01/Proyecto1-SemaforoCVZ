@@ -26,9 +26,6 @@ const Header = () => {
           <h1 className="link"><li>
             <Link to="/singup">Registrarse</Link>
           </li></h1>
-          <h1 className="link"><li>
-            <Link to="/pacientes">Pacientes</Link>
-          </li></h1>
           </ul>
         </div>
       </div>

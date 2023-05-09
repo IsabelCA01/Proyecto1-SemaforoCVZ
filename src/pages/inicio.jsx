@@ -19,10 +19,12 @@ const Index = () => {
           <p className="text">El veterinario actualiza el sistema cuando hay un cambio significativo en el estado de los pacientes.
           No te preocupes si no observas un cambio en varias horas. Ante cualquier emergencia, se te contactará directamente.
           </p>
+          <div className="botones">
         <button className="btninicio"onClick={() => (setOpenModalInfo(true))}>
           Información de contacto</button>
         <button className="btninicio"onClick={() => (setOpenModalFun(true))}>
           ¿Cómo funciona?</button>
+          </div>
           <br></br>
           <div>
             {openModalInfo && <ModalInfo closeModalInfo={setOpenModalInfo}/>}

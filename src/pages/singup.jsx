@@ -1,5 +1,7 @@
 import { useState } from "react";
-import "../styles/singup.css"
+import "../styles/singup.css";
+import { useAuth }  from "../contexts/authContext";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
@@ -8,16 +10,44 @@ const Register = () => {
     //apellido: "",
     email: "",
     password: "",
-})
+  });
+
+  const { singupfunction } = useAuth()
+  const navigate = useNavigate()
+  const [error, setError] = useState();
+
 
   const handleChange = ({target: {name,value}}) => {
    setUser({...user, [name]: value})
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    console.log(user);
-  }
+    setError("")
+    try {
+      await singupfunction(user.email, user.password);
+      navigate("/");
+    }
+    catch (error){
+      console.log(error.code)
+      if (error.code === "auth/weak-password"){
+        setError("La contraseña debe tener más de 6 carácteres.")
+      }
+      else if (error.code === "auth/missing-password"){
+        setError("Debe elegir una contraseña")
+      }
+      else if( error.code === "auth/invalid-email"){
+        setError("Email invalido")
+      }
+      else if( error.code === "auth/missing-email"){
+        setError("Debe ingresar un email")
+      }
+      else if( error.code === "auth/email-already-in-use"){
+        setError("El email ya se encuentra registrado")
+      }
+      else{
+      setError(error.message)}
+    }};
 
     return (
       <div className='suall'>
@@ -45,7 +75,9 @@ const Register = () => {
               <div className="suinput">
               <input type="password" placeholder='Repita la contraseña' name='passwordAgain' id='passwordAgain' onChange={handleChange}></input>
               </div>
-
+              <div className="error">
+              {error && <p>{error}</p>}
+              </div>
               <button className="suboton"> Crear Sesión </button>
             </form>
           </div>

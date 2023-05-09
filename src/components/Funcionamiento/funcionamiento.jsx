@@ -13,24 +13,24 @@ export const ModalFun = ({closeModalFun}) => {
               Ten en cuenta que nuestros veterinarios están muy ocupados cuidando de todos los animales,
               así que no estarán actualizando la información a cada instante. Si no observas cambios, vuelve
               a intentarlo en unas horas.
-              <br></br> 
-              No te preocupes, ante cualquier emergencia, el veterinario se comunicará con el número de teléfono de contacto
-              que se dejó al momento de la admisión del paciente.
             </p>
           </div>
           <div>
             <h2 className='title2'>Clasificación por colores</h2>
             <div className='semaforo'>
               <div className='green'></div>
-              <p>Color verde</p>
+              <p className="textsem">Color verde: <span>Implica que la mascota ya terminó tratamiento y se encuentra mejor. Es posible que sea dado de alta 
+                en pocas horas.</span></p>
             </div>
             <div className='semaforo'>
               <div className='yellow'></div>
-              <p>Color amarillo</p>
+              <p className="textsem">Color amarillo: <span>El paciente se encuentra estable y todavía está en tratamiento. No será
+                dado de alta hasta que acabe el tratamiento.</span></p>
             </div>
             <div className='semaforo'>
               <div className='red'></div>
-              <p>Color rojo</p>
+              <p className="textsem">Color rojo: <span>El paciente se encuentra en estado crítico. Es posible que haya sido hospitalizado 
+                hace pocas horas y todavía se necesite ver su respuesta al tratamiento.</span></p>
             </div>
           </div>
         </div>
