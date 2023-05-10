@@ -1,11 +1,20 @@
 import "../styles/pacientes.css"
 import Paciente1 from "../components/PacienteEjemplo/pacienteejemplo";
+import {useAuth} from "../contexts/authContext";
 
 const Pacientes = () => {
+  const {user, logoutFunction, loading } = useAuth();
+  console.log(user);
 
+  const handleLogout = async () => {
+    await logoutFunction();
+  }
+
+  if (loading) return <h1>Loading...</h1>;
     return (
       <div className='paall'>
       <div className='pacontainer'>
+        <h1 className="nombre">Hola { user.email }</h1>
         <h1 className="pah1">Pacientes a tu nombre</h1>
         <div className="pacolumns">
           <div className="papaciente">
@@ -17,9 +26,11 @@ const Pacientes = () => {
             <button className="paboton">Ver información del paciente</button>
           </div>
         </div>
+        <button onClick={handleLogout} className="paboton">Cerrar Sesión</button>
       </div>
       </div>
     );
   };
+  
   
   export default Pacientes;

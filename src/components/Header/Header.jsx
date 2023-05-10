@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ProtectedRoutes from "../ProtectedRoutes/ProtectedRoutes";
 
 import LogIn from "../../pages/login";
 import Index from "../../pages/inicio";
 import SingUp from "../../pages/singup";
-import Pacientes from "../../pages/Pacientes";
+import Pacientes from "../../pages/pacientes";
 
 import "./header.css";
 
@@ -30,10 +31,10 @@ const Header = () => {
         </div>
       </div>
       <Routes>
-        <Route exact path="/" element={<Index />}></Route>
-        <Route exact path="/login" element={<LogIn />}></Route>
-        <Route exact path="/singup" element={<SingUp />}></Route>
-        <Route exact path="/pacientes" element={<Pacientes/>}></Route>
+        <Route path="/" element={<Index />}></Route>
+        <Route path="/login" element={<LogIn />}></Route>
+        <Route path="/singup" element={<SingUp />}></Route>
+        <Route path="/pacientes" element={<ProtectedRoutes><Pacientes/></ProtectedRoutes>}></Route>
       </Routes>
     </Router>
   );
