@@ -9,6 +9,7 @@ const Index = () => {
     return (
       <div>
       <div className="container">
+        <div className="shadow">
         <div className="background">
           <h1 className="backgroundtext">Centro de veterinaria y zootecnia CES</h1>
         </div>
@@ -32,6 +33,7 @@ const Index = () => {
           </div>
           </div>
           
+        </div>
         </div>
       </div>
     );

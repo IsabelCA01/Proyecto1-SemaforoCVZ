@@ -29,7 +29,6 @@ const LogIn = () => {
       navigate("/pacientes");
     }
     catch (error){
-      console.log(error.code)
       if (error.code === "auth/wrong-password"){
         setError("Contraseña incorrecta.")
       }
