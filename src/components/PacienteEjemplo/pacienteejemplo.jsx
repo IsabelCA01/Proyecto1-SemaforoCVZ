@@ -9,4 +9,5 @@ const Paciente1 = () => {
   );
 };
 
+
 export default Paciente1

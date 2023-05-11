@@ -1,5 +1,6 @@
-import "../styles/pacientes.css"
+import "../styles/perfil.css"
 import Paciente1 from "../components/PacienteEjemplo/pacienteejemplo";
+import Paciente2 from "../components/PacienteEjemplo/pacienteejemplo2";
 import {useAuth} from "../contexts/authContext";
 import { useNavigate } from "react-router-dom";
 
@@ -29,7 +30,7 @@ const Pacientes = () => {
             <button className="paboton" onClick={handleNavigate}>Ver información del paciente</button>
           </div>
           <div className="papaciente">
-            <Paciente1/>
+            <Paciente2/>
             <button className="paboton" onClick={handleNavigate}>Ver información del paciente</button>
           </div>
         </div>

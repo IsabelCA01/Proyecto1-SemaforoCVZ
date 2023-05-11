@@ -26,7 +26,7 @@ const LogIn = () => {
     setError("")
     try {
       await loginFunction(user.email, user.password);
-      navigate("/pacientes");
+      navigate("/perfil");
     }
     catch (error){
       if (error.code === "auth/wrong-password"){

@@ -1,0 +1,16 @@
+.ipback{
+    background-color: pink;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.ipcontainer{
+    text-align: justify;
+    background-color: white;
+    padding: 10px;
+}
+
+.ipcontainer h1{
+    text-align: center;
+
+}
