@@ -1,13 +1,19 @@
 import "../styles/pacientes.css"
 import Paciente1 from "../components/PacienteEjemplo/pacienteejemplo";
 import {useAuth} from "../contexts/authContext";
+import { useNavigate } from "react-router-dom";
 
 const Pacientes = () => {
   const {user, logoutFunction, loading } = useAuth();
   console.log(user);
+  const navigate = useNavigate()
 
   const handleLogout = async () => {
     await logoutFunction();
+  }
+
+  const handleNavigate = async () => {
+    await navigate("/infopaciente");
   }
 
   if (loading) return <h1>Loading...</h1>;
@@ -20,11 +26,11 @@ const Pacientes = () => {
         <div className="pacolumns">
           <div className="papaciente">
             <Paciente1/>
-            <button className="paboton">Ver información del paciente</button>
+            <button className="paboton" onClick={handleNavigate}>Ver información del paciente</button>
           </div>
           <div className="papaciente">
             <Paciente1/>
-            <button className="paboton">Ver información del paciente</button>
+            <button className="paboton" onClick={handleNavigate}>Ver información del paciente</button>
           </div>
         </div>
         <div className="logoutbtn">

@@ -6,6 +6,7 @@ import LogIn from "../../pages/login";
 import Index from "../../pages/inicio";
 import SingUp from "../../pages/singup";
 import Pacientes from "../../pages/pacientes";
+import InfoPacientes from "../../pages/infoPacientes";
 
 import "./header.css";
 
@@ -35,6 +36,7 @@ const Header = () => {
         <Route path="/login" element={<LogIn />}></Route>
         <Route path="/singup" element={<SingUp />}></Route>
         <Route path="/pacientes" element={<ProtectedRoutes><Pacientes/></ProtectedRoutes>}></Route>
+        <Route path="/infopaciente" element={<ProtectedRoutes><InfoPacientes/></ProtectedRoutes>}></Route>
       </Routes>
     </Router>
   );
