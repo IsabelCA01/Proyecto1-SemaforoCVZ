@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword,
         onAuthStateChanged,
         signOut,
         } from "firebase/auth";
-import { auth } from "../../firebase";
+import { auth } from "../../firebase1";
 
 export const cont = createContext();
 
